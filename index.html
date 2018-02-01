@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta Name="Author" content ="Marco Morley"/>
+<title>Fluency</title>
+<style>
+</style>
+<script type="text/javascript"></script>
+
+<Script>
+
+/* Loops, conditional statements, Function, Variables, Parameters, Arrays, Associative Arrays
+*/
+
+//CONDITIONAL STATEMENT AND VARIABLES
+function whattowear() {
+// user inputted weather
+var weather = document.getElementById('wInputBox').value;
+
+// shoe types 
+var snow;
+var hot;
+var rain;
+var wardrobe;
+//conditionl statement
+if (weather == "hot") {
+wardrobe = "Sandals";
+}
+else if (weather == "rain") {
+wardrobe = "Galoshes";
+}
+else if (weather == "snow") { 
+wardrobe = "Boots";
+}
+else {
+wardrobe = "Any kind of weather requires some kind of shoes!";
+} 
+document.getElementById('selection').innerHTML = wardrobe;
+}
+
+
+
+
+//FOR LOOP
+function loopDeloop() {
+var valueLoop = "";
+// this is my Variable
+var checkIt = document.getElementById('selectNumber').value;
+
+console.log(checkIt);
+
+
+// checkIt makes sure it isn't blank and that it is a number
+if(!isNaN(checkIt)) {
+valueLoop = runLoop(checkIt);
+}
+else {
+valueLoop = "You did not Enter a pure Integer. You Entered |" + checkIt + "|";
+}
+
+console.log(valueLoop);
+document.getElementById("results").innerHTML = valueLoop;
+}
+
+function runLoop(count)
+{
+var valueLoop = "Loops: ";
+
+for(var ii=0; ii<count; ii++) {
+valueLoop += "Iteration: " + ii + "<br/>";
+}
+
+return valueLoop;
+}
+
+//ARRAY & ASSOCIATIVE Arrays
+//Javascript doesn't support associative arrays
+//but can be done through objects which allow string index
+
+function showArray() {
+var checkIt = document.getElementById('makeString').value;
+
+console.log(checkIt);
+
+var arrayList = "This is the array list: <br/>";
+
+
+if(checkIt.includes(",") ) {
+var myArray = checkIt.split(",");
+
+for(var ii=0; ii<myArray.length; ii++) {
+//myArray[ii] = 'a';
+arrayList += "|" + myArray[ii] + "|<br/>";
+}
+
+}
+else {
+arrayList = "You must use a comma to seperate the array list";
+}
+
+console.log(arrayList);
+document.getElementById("output").innerHTML = arrayList;
+
+}
+
+
+
+</script>
+</head>
+
+
+<body>
+<div>
+<label>What is the weather like?(hot, rain or snow)</label><input type="text" id="wInputBox"></input><br><br>
+<button type="button" onclick="whattowear()">Click for Weather approved shoe selection</button><br><br>
+</div>
+<div id="selection"></div><br><br>
+
+
+<div>
+<label>How many loop iterations do you want to see?: </lable> <input id="selectNumber" type="text" value=""></input><br />
+<button onclick="loopDeloop()">click for loop output</button><br /><br />
+</div>
+<div><p id="results"></p></div>
+
+
+<div>
+<label>Enter an integer or string seperated by a comma for you list: </lable> <input id="makeString" type="text" value=""></input><br />
+<button onclick="showArray()">Show your array</button><br /><br />
+</div>
+<div id="output"></div>
+
+
+</body>
+</html>

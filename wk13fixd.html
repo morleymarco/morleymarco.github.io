@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>code 13 </title>
+<script type="text/javascript">
+    /*counts even numbers in list*/
+	/*mulitplies each number by a number*/
+    
+    function theTest() {
+        var list = [11, 84, 9, 52, 20, 120];
+        var multiplier = 5;
+        var count = 0;
+        var count2 = 0;
+        var answer = 0;
+        count = countEvens(list);
+        count2 = multiply(list, multiplier);
+        
+        answer2= "This is all the numbers individually multiplied by 5: "+"<br>" + count2;
+		
+		document.getElementById("output2").innerHTML = answer2;
+		;
+    }
+/*what are the even numbers*/
+function countEvens(list) {
+    var count3 = 0;
+	var arrycount = list.length -1;
+    for (var i = 0; i <= arrycount; i++) {
+        if (list[i] % 2 == 0) {
+          count3++;  
+        }
+		else{
+		count3 = count3;
+		}
+    }
+    //alert(count3)
+	document.getElementById('countevens').innerHTML = "I counted " +count3+" even numbers." 
+}
+   
+
+   /*muplicatoin.*/
+  function multiply(list, multiplier) {
+        //var timesNum;
+            timesNum=list.map(function(list){return list * multiplier;});
+        return timesNum;
+    }
+ </script>
+ </head>
+ 
+ I chose these numbers [11, 84, 9, 52, 20, 120] <br><br>
+ click to find even numbers and then multiply them <br>
+ <button type="button" onclick="theTest()">count and multiply</button><br><br>
+ 
+ <div id="countevens"></div><br><br>
+<div id="output2"></div>
+ 
+ 
+ </html>

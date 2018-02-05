@@ -1,12 +1,13 @@
-## Welcome to GitHub Pages
+## Welcome to the pages of Marco Morley
 
 You can use the [editor on GitHub](https://github.com/morleymarco/morleymarco.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+These are my learning pages.  I have a long ways to go and hopefully can use this page as a place to get help, as well as demonstrate
+work that I am trying to accomplish.
 
-### Markdown
+### 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+T
 
 ```markdown
 Syntax highlighted code block

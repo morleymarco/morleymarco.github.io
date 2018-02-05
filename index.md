@@ -1,38 +1,162 @@
-## Welcome to the pages of Marco Morley
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>jCarousel - Riding carousels with jQuery</title>
 
-You can use the [editor on GitHub](https://github.com/morleymarco/morleymarco.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+        <meta name="description" content="jCarousel is a jQuery plugin for controlling a list of items in horizontal or vertical order. It provides a full-featured and flexible toolset for navigating any HTML based content in a carousel-like fashion.">
 
-These are my learning pages.  I have a long ways to go and hopefully can use this page as a place to get help, as well as demonstrate
-work that I am trying to accomplish.
+        <meta property="og:site_name" content="jCarousel - Riding carousels with jQuery">
+        <meta property="og:title" content="jCarousel - Riding carousels with jQuery">
+        <meta property="og:description" content="jCarousel is a jQuery plugin for controlling a list of items in horizontal or vertical order. It provides a full-featured and flexible toolset for navigating any HTML based content in a carousel-like fashion.">
+        <meta property="og:image" content="assets/img/og-image.png">
 
-### 
+        <link href="assets/style.css" media="all" rel="stylesheet" type="text/css">
 
-T
+        <script src="vendor/modernizr/modernizr.js"></script>
 
-```markdown
-Syntax highlighted code block
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-# Header 1
-## Header 2
-### Header 3
+            ga('create', 'UA-34232738-1', 'auto');
+            ga('set', 'anonymizeIp', true);
+            ga('send', 'pageview');
+        </script>
+            </head>
 
-- Bulleted
-- List
+    <body class="home">
+        <div id="wrapper">
+            <div class="logo-wrapper clearfix">
+                <header class="logo clearfix">
+                        <h1>jCarousel</h1>
+    <h2>Riding carousels with jQuery</h2>
+                </header>
+            </div>
+                <div class="stage-wrapper clearfix">
+        <div class="stage clearfix">
+            <div class="stage-container">
+                <div class="jcarousel-wrapper">
+                    <div class="jcarousel">
+                        <ul class="clearfix">
+                            <li><img src="assets/img/pic/img1.jpg" width="748" height="300" alt=""></li>
+                            <li><img src="assets/img/pic/img2.jpg" width="748" height="300" alt=""></li>
+                            <li><img src="assets/img/pic/img3.jpg" width="748" height="300" alt=""></li>
+                        </ul>
+                    </div>
 
-1. Numbered
-2. List
+                    <p class="photo-credits">
+                        Photos by <a href="http://www.mw-fotografie.de">Marc Wiegelmann</a>
+                    </p>
 
-**Bold** and _Italic_ and `Code` text
+                    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
 
-[Link](url) and ![Image](src)
-```
+                    <p class="jcarousel-pagination"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="nav-wrapper clearfix">
+                <nav class="nav clearfix">
+                    <ul>
+                        <li><a href="docs/">Documentation</a></li>
+                        <li><a href="examples/">Examples</a></li>
+                        <li><a href="contributing.html">Contributing</a></li>
+                        <li><a href="https://github.com/jsor/jcarousel">GitHub</a></li>
+                        <li class="download"><a href="dist/">Download</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content-wrapper">
+                <div class="content">
+                        <p>jCarousel is a jQuery plugin for controlling a list of items in horizontal or vertical order.</p>
+    <p>It provides a full-featured and flexible toolset for navigating any HTML based content in a carousel-like fashion.</p>
+                </div>
+            </div>
+            <div class="footer-wrapper">
+                <div class="footer teaser clearfix">
+                    <h3>Checkout my other projects</h3>
+                    <a href="http://sorgalla.com/lity/" class="teaser-box">
+                        <h3>Lity</h3>
+                        <p>A lightweight responsive lightbox.</p>
+                    </a>
+                    <a href="http://sorgalla.com/gee/" class="teaser-box">
+                        <h3>gee</h3>
+                        <p>A minimalistic grid system framework.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-wrapper">
+                <footer class="footer clearfix">
+                    <p>Copyright (c) 2006-<script>document.write(new Date().getFullYear());</script> <a href="http://sorgalla.com">Jan Sorgalla</a>. Released under the <a href="https://github.com/jsor/jcarousel/blob/master/LICENSE">MIT license</a>. <a href="http://sorgalla.com/impressum">Impressum</a>.</p>
+                </footer>
+            </div>
+        </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="dist/jquery.jcarousel.min.js"></script>
+    <script>
+        $(function () {
+            var jcarousel = $('.jcarousel');
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+            jcarousel
+                    .on('jcarousel:reload jcarousel:create', function () {
+                        jcarousel.jcarousel('items').width(jcarousel.innerWidth());
+                    })
+                    .jcarousel({
+                        wrap: 'circular',
+                        transitions: Modernizr.csstransitions ? {
+                            transforms:   Modernizr.csstransforms,
+                            transforms3d: Modernizr.csstransforms3d,
+                            easing:       'ease'
+                        } : false
+                    });
 
-### Jekyll Themes
+            $('.jcarousel-control-prev')
+                    .on('jcarouselcontrol:active', function() {
+                        $(this).removeClass('inactive');
+                    })
+                    .on('jcarouselcontrol:inactive', function() {
+                        $(this).addClass('inactive');
+                    })
+                    .jcarouselControl({
+                        target: '-=1'
+                    });
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/morleymarco/morleymarco.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+            $('.jcarousel-control-next')
+                    .on('jcarouselcontrol:active', function() {
+                        $(this).removeClass('inactive');
+                    })
+                    .on('jcarouselcontrol:inactive', function() {
+                        $(this).addClass('inactive');
+                    })
+                    .on('click', function(e) {
+                        e.preventDefault();
+                    })
+                    .jcarouselControl({
+                        target: '+=1'
+                    });
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+            $('.jcarousel-pagination')
+                    .on('jcarouselpagination:active', 'a', function() {
+                        $(this).addClass('active');
+                    })
+                    .on('jcarouselpagination:inactive', 'a', function() {
+                        $(this).removeClass('active');
+                    })
+                    .on('click', function(e) {
+                        e.preventDefault();
+                    })
+                    .jcarouselPagination({
+                        item: function(page) {
+                            return '<a href="#' + page + '">' + page + '</a>';
+                        }
+                    });
+        });
+    </script>
+    </body>
+</html>

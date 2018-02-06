@@ -14,6 +14,7 @@ Syntax highlighted code block
 
 # Header 1
 <a href="https://morleymarco.github.io/topic1.html">Loops and arrays</a>
+[1]: http://morleymarco.github.io/topic1.html
 
 ## Header 2
 ### Header 3

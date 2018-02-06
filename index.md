@@ -26,7 +26,7 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-<img src="pics/Generations.png" alt="legacy" class="inline"/>
+<img src="../pics/Generations.png" alt="legacy" class="inline"/>
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 

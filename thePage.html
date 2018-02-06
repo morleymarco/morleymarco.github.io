@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+Home Page
+-->
+<html lang="en-us">
+    <head>
+        <title>Home | Utah Safe Waste</title>
+        <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/head.php'; ?>
+         
+           <style>
+  figure{
+    max-width: 1000px;
+    max-height: 235px;
+    margin: 2em;
+  }
+  figure > img{
+    max-width: 100%;
+  }
+</style>
+    </head> 
+    <body id="home" class="active">
+        <div>            
+            <header role="banner" id="page-header">               
+                <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/header.php'; ?>
+            </header>
+            
+            <nav role="navigation">
+                <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/nav.php'; ?>
+            </nav>
+            
+            <main role="main">
+                <div>
+                    <h1></h1>
+                    
+                    <h2></h2>
+                    <p></p>
+
+                    <h3></h3>
+                    <p></p>
+                    <p></p>
+                
+                <figure><img src="images/clavemelt.jpg" id="mainImage" alt="Waste after it has been treated in the autoclave.">
+      <figcaption id="mainImageCaption">Medical waste</figcaption>
+    </figure>
+                    </div>
+            </main>
+            
+            <aside role="complementary">
+                <div>
+                    
+                </div>
+            </aside>
+            
+            <footer role="contentinfo" id="page-footer">
+		<?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
+                
+            </footer>
+            
+        </div>
+        <script src="/javascript/rotator.js"></script>
+    </body>
+</html>

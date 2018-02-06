@@ -7,7 +7,7 @@ work that I am trying to accomplish.
 
 ### 
 
-T
+Check out my code (for the teacher currently)
 
 ```markdown
 Syntax highlighted code block
